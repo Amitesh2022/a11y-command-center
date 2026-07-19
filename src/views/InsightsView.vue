@@ -1,0 +1,1 @@
+<template><section class="panel insight"><span class="eyebrow">Architecture</span><h2>Composition-first delivery</h2><p>Typed Pinia stores, computed portfolio metrics, Vue Router boundaries, and isolated views form a maintainable foundation for larger applications.</p></section></template>
