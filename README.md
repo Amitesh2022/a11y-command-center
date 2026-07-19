@@ -1,17 +1,57 @@
 # A11y Command Center
 
-An accessibility operations platform for product coverage, remediation velocity, and compliance evidence.
+An accessibility operations product for tracking audit coverage, remediation progress, and conformance risk across a portfolio of digital experiences.
 
-## Product capabilities
+[Watch the running product demo](docs/demo.webm)
 
-- Decision-focused operational dashboard with responsive, accessible interaction patterns
-- Derived portfolio metrics and explicit risk/status visualization
-- Deterministic local data flows suitable for demos and testing
-- Production TypeScript build with component/state tests
+## Why this product matters
 
-## Architecture
+Accessibility work is frequently spread across audit documents and issue trackers. This command center gives product, design, and compliance teams a shared view of coverage and progress.
 
-The application separates presentation, domain state, and derived operational metrics. It uses Vue 3 Composition API, Pinia, and Vue Router for a scalable frontend foundation.
+## Intended users
+
+- Accessibility program managers
+- Product and design-system teams
+- Compliance and public-service delivery teams
+
+## Core workflows
+
+- Review portfolio accessibility confidence
+- Compare product audits and conformance risk
+- Advance remediation coverage interactively
+- Navigate to portfolio insights for a broader program view
+
+## Current capabilities
+
+- Audit portfolio with risk labels and coverage bars
+- Reactive aggregate metrics
+- Interactive remediation progress
+- Control-room and insights routes
+- Responsive sidebar and content layout
+
+## Vue technical highlights
+
+- Vue 3 Composition API
+- Pinia store with derived portfolio metrics
+- Vue Router for control-room and insights views
+- Typed state transitions and Vitest store tests
+- Accessible semantic controls and responsive styling
+
+## Architecture and data flow
+
+Pinia owns audit records and progress actions. Vue components consume reactive store state, while computed values summarize program confidence. Router views separate operational review from insights.
+
+## Accessibility and responsive behavior
+
+The interface uses semantic headings, labelled regions, native interactive controls, visible status text in addition to color, keyboard-operable actions, and layouts that adapt to narrower screens. Automated tests cover the central state behavior; a production release should add continuous WCAG audits with assistive-technology review.
+
+## Project structure
+
+- src/views/ControlRoom.vue — audit operations
+- src/views/InsightsView.vue — program insights
+- src/store.ts — typed audit state and actions
+- src/router.ts — application navigation
+- docs/demo.webm — running workflow video
 
 ## Run locally
 
@@ -22,10 +62,23 @@ npm run build
 npm run dev
 ```
 
-## Demo
+For Angular projects, `npm start` is also available for the development server.
 
-[Watch the running application](docs/demo.webm)
+## Verification
+
+- Strict TypeScript compilation
+- Automated component or state tests
+- Production build
+- Real-browser interaction check
+- Demo-video playback and frame inspection
 
 ## Tradeoffs
 
-The portfolio uses deterministic local scenarios so reviewers can explore every state without external credentials. A production deployment would connect the domain adapters to authenticated APIs and persist audit history.
+The demonstration uses curated audit data rather than claiming automated compliance. A production system would integrate scanning tools while preserving expert review, evidence attachments, exceptions, and traceable ownership.
+
+## Roadmap
+
+- WCAG criterion drill-down and evidence attachments
+- Issue-tracker integrations and ownership SLAs
+- Multilingual accessibility statements
+- Design-system component coverage
