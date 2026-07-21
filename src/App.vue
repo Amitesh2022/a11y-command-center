@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BackendStatus from './components/BackendStatus.vue'
 import { storeToRefs } from 'pinia'
 import { RouterLink, RouterView } from 'vue-router'
 import { useDeliveryStore } from './store'
@@ -20,4 +21,4 @@ const { completion, releases } = storeToRefs(store)
       <RouterView />
     </main>
   </div>
-</template>
+<BackendStatus /></template>

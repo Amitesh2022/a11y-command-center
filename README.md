@@ -20,9 +20,13 @@ A11y Command Center helps teams make websites and apps easier for everyone to us
 
 The product uses Vue to organise separate pages, forms, lists, and smooth screen changes. Shared information stays in one place so every page shows the same result. Automated checks cover the most important actions.
 
+## Java backend highlights
+
+The Java backend uses Spring Boot. It provides real API endpoints to list, search, and create accessibility check records. It checks incoming information, returns clear errors, exposes a health check, and includes automated Java tests.
+
 ## Architecture and state flow
 
-The product is split into clear pages. Shared information is kept in one central place, while each page manages only the search box, filters, or form currently being used. A user action updates the shared information and every related page shows the new result.
+The browser application calls the Java API on port 8080. The Java service checks the request and keeps the shared product information. After a user creates a record, the API returns the saved result and the browser refreshes the list.
 
 ## Accessibility and responsive behaviour
 
@@ -37,10 +41,15 @@ npm ci
 npm test
 npm run build
 npm run dev
+npm run backend:test
+npm run backend:build
+npm run fullstack
 ```
 
 ## Structure
 
+- `backend/` — the Java API, validation, business rules, and tests.
+- `scripts/run-full-stack.mjs` — starts the frontend and backend together.
 - `src/` — the product pages, actions, and design.
 - `docs/demo.webm` — a short video showing the product.
 - `package.json` — the commands and packages needed to run it.
