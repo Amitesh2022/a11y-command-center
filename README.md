@@ -58,3 +58,31 @@ Open [http://localhost:5173](http://localhost:5173) for the product. The Java AP
 ## Commercial licensing/contact
 
 No commercial license is granted automatically. For commercial licensing, integration work, consulting, or partnership enquiries, contact [Amitesh2022 through GitHub](https://github.com/Amitesh2022).
+
+## Business problem and users
+
+A11y Command Center helps teams make websites and apps easier for everyone to use, including people with disabilities. It is useful for product teams, designers, testers, and managers who want to improve accessibility.
+
+## Key workflows
+
+- See accessibility problems in one place.
+- Find the most important problems first.
+- Track which problems are being fixed.
+- Check progress across different products.
+- Keep clear proof of completed work.
+
+## Vue highlights
+
+The product uses Vue to organise separate pages, forms, lists, and smooth screen changes. Shared information stays in one place so every page shows the same result. Automated checks cover the most important actions.
+
+## Java backend highlights
+
+The Java backend uses Spring Boot. It provides real API endpoints to list, search, and create accessibility check records. It checks incoming information, returns clear errors, exposes a health check, and includes automated Java tests.
+
+## Architecture and state flow
+
+The browser application calls the Java API on port 8080. The Java service checks the request and keeps the shared product information. After a user creates a record, the API returns the saved result and the browser refreshes the list.
+
+## Accessibility and responsive behaviour
+
+Buttons, forms, and links can be used with a keyboard. Labels explain what each field does, and important information is shown with words, not only colours. The layout also adjusts for tablets and phones.
